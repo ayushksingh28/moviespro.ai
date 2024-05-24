@@ -1,3 +1,4 @@
 pandas
 streamlit
 markdown
+scikit-learn
