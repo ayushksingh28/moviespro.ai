@@ -109,7 +109,7 @@ if st.button("Get similar plots"):
         st.header(name)
         st.write(li)
         st.write(plt)
-        st.makrdown(".....")
+        st.markdown(".....")
 
 
 
