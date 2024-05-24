@@ -20,7 +20,7 @@ def load_data():
     
 @st.cache
 def get_transformed_output():
-    tfidfvectorizer = TfidfVectorizer(analyze = "words", stop_words = "english")
+    tfidfvectorizer = TfidfVectorizer(analyzer = "word", stop_words = "english")
     tfidfvectorizer.fit(data["Plot"])
     transform_output = tfidfvectorizer.transform(data["Plot"])
     return tfidfvectorizer, transform_output
