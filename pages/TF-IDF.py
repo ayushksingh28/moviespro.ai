@@ -26,7 +26,7 @@ def get_transformed_output():
     return tfidfvectorizer, transform_output
 
 def get_keywords_tfidf():
-    movie_plot = data.iloc[st.session_state.page]["Page"]
+    movie_plot = data.iloc[st.session_state.page]["Plot"]
     vectorizer, transf_output = get_transformed_output()
     movie_vector = vectorizer.transform([movie_plot])
     ftr_names = vectorizer.get_feature_names_out()
@@ -111,5 +111,5 @@ if st.button("Get similar plots"):
         st.write(plt)
         st.makrdown(".....")
 
-        
+
 
