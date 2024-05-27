@@ -9,12 +9,12 @@ import ast
 st.markdown("<h1 style='text-align: center; color: blue;'>Moviepro.ai</h1>", unsafe_allow_html=True)
 st.write("## Extract keywords, find similar movie plots with Sentence Transformers")
 
-movie_plots_path = "American_Movie_Plots_2005_2021_v1_embeddings.csv"
+movie_plots_path = "American_movie_plots_2005_2021_v1_embeddings.csv"
 
 @st.cache
 def load_data():
      df = pd.read_csv(movie_plots_path,converters={'full_embeddings':ast.literal_eval})
-     df.drop_duplicates(subset ="Wiki Link", keep = False, inplace = True)
+     df.drop_duplicates(subset ="Wiki link", keep = False, inplace = True)
      return df
 
 
@@ -35,7 +35,7 @@ def get_similar_movies(N,index):
   for ind in related_docs_indices:
     title = data.iloc[ind]['Movie Name']
     movie_plot = data.iloc[ind]['Plot']
-    link = data.iloc[ind]['Wiki Link']
+    link = data.iloc[ind]['Wiki link']
     titles.append(title)
     plots.append(movie_plot)
     links.append(link)
@@ -74,7 +74,7 @@ middle.write(f"Page {1+st.session_state.page} of {last_page}")
 
 row = data.iloc[st.session_state.page]
 movie_name = row['Movie Name']
-link = row['Wiki Link']
+link = row['Wiki link']
 plot = row['Plot']
 st.header(movie_name)
 st.write(link)
