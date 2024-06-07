@@ -64,7 +64,7 @@ Moviespro.ai is an AI-powered web application designed to organize, analyze, and
 
 ### File Structure
 
-- `app.py`: Main Streamlit application file.
+- `streamlit_app.py`: Main Streamlit application file.
 - `American_movie_plots_2005_2021_v1.csv`: Dataset containing movie plots for the TF-IDF method.
 - `American_movie_plots_2005_2021_v1_embeddings.csv`: Dataset containing movie plots and their sentence embeddings for the Sentence Transformers method.
 
@@ -72,5 +72,8 @@ Moviespro.ai is an AI-powered web application designed to organize, analyze, and
 
 Moviespro.ai showcases the power of AI in text analysis and natural language processing, providing users with tools to efficiently analyze and find similarities in movie scripts. By leveraging both traditional TF-IDF and modern Sentence Transformers, the application offers flexible and robust solutions for different analytical needs.
 The application is later integrated with a text paraphraser which used GPT to paraphrase the text content and it was deployed over self scaling AWS Lambda service using AWS SAM as an API sevice which was locally verified using Postman.
+
+You can see how it works in the demo video given here: https://drive.google.com/file/d/1vbAOnGAzYUwW8UMyZZZE3087aeTv-FP_/view?usp=sharing
+
 
 Thank you, hope you enjoy the work!
